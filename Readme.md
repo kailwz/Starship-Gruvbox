@@ -1,15 +1,14 @@
-<h1>My starship shell prompt config file</h1>
-<h2>Gruvbox Theme</h2>
+<h1>My starship shell prompt config file with Gruvbox Theme</h1>
 <blockquote>For linux only!</blockquote>
+
+<img src="/Media/normal.png"/>
+<img src="/Media/screenfetch.png"/>
 
 I used the <a href="https://starship.rs/presets/pastel-powerline.html">Pastel Powerline Preset</a> and added the colors of the gruvbox theme
 
-<img src=""/>
-<img src=""/>
-
 just copy the starship.toml file to the .config folder.
 
-if needed download the theme using gogh theme selector on the terminal using the command bellow.
+if needed download the terminal theme using gogh theme selector with the command bellow.
 
 <blockquote>wget -O gogh https://git.io/vQgMr && chmod +x gogh &&  ./gogh && rm gogh</blockquote>
 

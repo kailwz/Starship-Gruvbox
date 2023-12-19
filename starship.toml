@@ -1,0 +1,144 @@
+format = """
+[](#458588)\
+$os\
+$username\
+[](bg:#98971a fg:#458588)\
+$directory\
+[](fg:#98971a bg:#d79921)\
+$git_branch\
+$git_status\
+[](fg:#d79921 bg:#928374)\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+[](fg:#928374 bg:#665c54)\
+$docker_context\
+[](fg:#665c54 bg:#504945)\
+$time\
+[ ](fg:#504945)\
+"""
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
+[username]
+show_always = true
+style_user = "bg:#458588"
+style_root = "bg:#458588"
+format = '[$user ]($style)'
+disabled = false
+
+# An alternative to the username module which displays a symbol that
+# represents the current operating system
+[os]
+style = "bg:#458588"
+disabled = true # Disabled by default
+
+[directory]
+style = "bg:#98971a"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = " 󰈙 "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important 󰈙 " = " 󰈙 "
+
+[c]
+symbol = " "
+style = "bg:#928374"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#665c54"
+format = '[ $symbol $context ]($style) $path'
+
+[elixir]
+symbol = " "
+style = "bg:#928374"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#928374"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#d79921"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#d79921"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#928374"
+format = '[ $symbol ($version) ]($style)'
+
+[gradle]
+style = "bg:#928374"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#928374"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#928374"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#928374"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#928374"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = "󰆥 "
+style = "bg:#928374"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#928374"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = " "
+style = "bg:#928374"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#504945"
+format = '[  $time ]($style)'
